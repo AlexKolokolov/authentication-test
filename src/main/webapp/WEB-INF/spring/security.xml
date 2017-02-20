@@ -13,6 +13,10 @@
 		<intercept-url pattern="/" access="permitAll" />
 		<intercept-url pattern="/faces/welcome.xhtml" access="hasRole('ADMIN')" />
 		<form-login authentication-failure-url="/faces/denied.xhtml" />
+		<logout logout-url="/appLogout"
+				logout-success-url="/"
+				invalidate-session="true"
+				delete-cookies="true" />
 		<csrf disabled="true" />
 	</http>
 	

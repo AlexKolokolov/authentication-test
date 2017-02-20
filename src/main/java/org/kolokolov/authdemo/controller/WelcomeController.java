@@ -2,8 +2,6 @@ package org.kolokolov.authdemo.controller;
 
 import javax.faces.bean.ManagedBean;
 
-import org.springframework.security.core.context.SecurityContextHolder;
-
 @ManagedBean
 public class WelcomeController {
     
@@ -15,11 +13,6 @@ public class WelcomeController {
             msg = String.format("Hello, %s!", name);
         }
         return msg;
-    }
-    
-    public String logout() {
-        SecurityContextHolder.clearContext();
-        return "welcome";
     }
 
     public String getName() {
